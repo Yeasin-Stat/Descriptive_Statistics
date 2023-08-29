@@ -8,7 +8,9 @@ Length <- function(x){
 }
 data5 <- c(4.9,4.1,4.4,3.3,4.6,4.8)
 Length(data5)
-#Maximum Function:
+
+
+##Maximum Function:
 Max <- function(x){
   len <- Length(x)
   max <- x[1]
@@ -21,7 +23,8 @@ Max <- function(x){
 }
 Max(data5)
 
-#Minimum Function:
+
+##Minimum Function:
 Min <- function(x){
   len <- Length(x)
   min <- x[1]
@@ -46,6 +49,8 @@ Summation <- function(x){
 Summation(data5)
 
 
+
+
 ### Measures of Central Tendency or Location:###
 
 ## Arithmetic Mean Function:
@@ -59,6 +64,8 @@ Arithmetic_mean <- function(x){
   return(aver)
 }
 Arithmetic_mean(data5)
+
+
 
 ## First function to find Geometric Mean
 Geometric_mean1 <- function(x){
@@ -83,6 +90,8 @@ Geometric_mean2 <- function(x){
 }
 Geometric_mean2(data1)
 
+
+
 ## Harmonic mean 1st function:
 Harmonic_mean1 <- function(x){
   len <- Length(x)
@@ -96,6 +105,8 @@ Harmonic_mean1 <- function(x){
 }
 data2 <- c(125, 130, 75, 10,45, 5, 0.50, 0.40, 500, 150)
 Harmonic_mean1(data2)
+
+
 
 ## Harmonic mean 2nd function : 
 Harmonic_mean2 <- function(x){
@@ -122,8 +133,8 @@ Credit <-c(3,2,3,3,3,2,1.5,1.5,1,2)
 Weighted_mean(Grade, Credit)
 
 
-## Median Function:
 
+## Median Function:
 Median <- function(x){
   sorted_x <- sort(x)
   len <- Length(sorted_x)
@@ -138,6 +149,8 @@ Median <- function(x){
 data3 <- c(3,5,2,8,4,10,14,16,24,74)
 Median(data3)
 
+
+
 ## Mode Function:
 Mode <- function(x){
   unique_x <- unique(x)
@@ -147,6 +160,8 @@ Mode <- function(x){
 }
 dat <- c(2,1,2,3,1,2,3,4,1,5,5,3,2,3)
 Mode(dat)
+
+
 
 ## Quartiles Function:
 Quartiles <- function(x,i){
@@ -161,10 +176,11 @@ Quartiles <- function(x,i){
   }
   return(quartile)  
 }
-
 data4 <- c(7850, 7950, 8050,7880, 7755, 7710, 7890, 8130, 7940, 8325, 7920, 7880)
 Quartiles(data4,1)
 Median(data4)
+
+
 
 ## Deciles Function:
 Deciles <- function(x,i){
@@ -183,6 +199,7 @@ data4 <- c(7850, 7950, 8050,7880, 7755, 7710, 7890, 8130, 7940, 8325, 7920, 7880
 Deciles(data4,1)
 
 
+
 ## Percentiles Function:
 Perceltiles <- function(x,i){
   sort_x <- sort(x)
@@ -198,9 +215,10 @@ Perceltiles <- function(x,i){
 }
 Perceltiles(data4,80)
 
+
+
 ## Others Measures of Average:
 ## Quadratic Mean Function:
-
 Quadratic_mean <- function(x){
   len <- Length(x)
   sum <- 0
@@ -213,6 +231,8 @@ Quadratic_mean <- function(x){
 y <- c(1,3,4,5,7)
 Quadratic_mean(y)
 
+
+
 ## Trimean Function:
 Trimean <- function(x){
   Q1 <- Quartiles(x,1)
@@ -222,6 +242,8 @@ Trimean <- function(x){
   return(tri_mean)
 }
 Trimean(data4)
+
+
 
 ## Trimmed Mean Function:
 Trimmed_mean <- function(x,trim){
@@ -239,6 +261,8 @@ Trimmed_mean <- function(x,trim){
 }
 data6 <- c(32,37,47,43,36,42,38,43,86,26)
 Trimmed_mean(data6,10)
+
+
 
 ### 5 number Summary Function:
 Summary <- function(x){
