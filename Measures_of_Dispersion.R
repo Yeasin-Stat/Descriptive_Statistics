@@ -7,6 +7,8 @@ Range(data5)
 data1 <- c(10,20,30,40,50,60,70)
 Range(data1)
 
+
+
 ## Coefficient of Range Function:
 Coef_of_Range <- function(x){
   Largest <- Max(x)
@@ -16,8 +18,9 @@ Coef_of_Range <- function(x){
 }
 Coef_of_Range(data1)
 
-## Mean Deviation Function:
 
+
+## Mean Deviation Function:
 Mean_Deviation <- function(x,from="mean"){
   len <- Length(x)
   if(from=="mean" ||from==1 ){
@@ -48,6 +51,8 @@ Mean_Deviation(data,1)
 
 
 
+
+
 ## Coefficient of Mean Deviation Function:
 Coef_of_Mean_Deviation <- function(x,from="mean"){
   if(from=="mean" || from==1){
@@ -68,6 +73,8 @@ Coef_of_Mean_Deviation <- function(x,from="mean"){
 }
 Coef_of_Mean_Deviation(data,"mode")
 
+
+
 ## Inter Quartile Range:
 IQR <- function(x){
   Q1 <- Quartiles(x,1)
@@ -75,6 +82,8 @@ IQR <- function(x){
   return(Q3-Q1)
 }
 IQR(data)
+
+
 
 ## Quartile Deviation:
 Quartile_Deviation <- function(x){
@@ -85,6 +94,8 @@ Quartile_Deviation <- function(x){
 }
 Quartile_Deviation(data)
 
+
+
 ## Coefficient of Quartiles Deviation:
 Coef_of_Quart_Deviation <- function(x){
   Q1 <- Quartiles(x,1)
@@ -93,6 +104,8 @@ Coef_of_Quart_Deviation <- function(x){
   return(round(coef_quart_deviation,3))
 }
 Coef_of_Quart_Deviation(data)
+
+
 
 ## Sample_Variance Function
 Sample_Variance <- function(x){

@@ -7,6 +7,7 @@
 data1 <- c(42.5,67.5,92.5,117.5,142.5,167.5,192.5)
 freq1 <- c(3,4,6,9,12,11,5)
 
+
 ## Function of Arithmetic mean##
 AR <- function(x,f=rep(1,times=length(x))){
   len <- length(x)
@@ -19,6 +20,7 @@ AR <- function(x,f=rep(1,times=length(x))){
   return(mean)
 }
 AR(data1,freq1)
+
 
 
 ## Function of Geometric mean ##
@@ -34,6 +36,7 @@ GM1 <- function(x,f=rep(1,times=length(x))){
 }
 GM1(data1,freq1)
 
+
 ## Another Way:
 GM2 <- function(x,f=rep(1,times=length(x))){
   len <- length(x)
@@ -46,6 +49,7 @@ GM2 <- function(x,f=rep(1,times=length(x))){
   return(round(mean,3))
 }
 GM2(data1,freq1)
+
 
 
 ### Function of Harmonic Mean ###
@@ -62,6 +66,8 @@ HM1<- function(x,f=rep(1,times=length(x))){
 }
 HM1(data1,freq1)
 
+
+
 ## Another Way:
 HM2 <- function(x,f=rep(1,times=length(x))){
   len <- length(x)
@@ -74,6 +80,7 @@ HM2 <- function(x,f=rep(1,times=length(x))){
   return(mean)
 }
 HM2(data1,freq1)
+
 
 
 ### Function of Sample Variance ###
@@ -94,6 +101,7 @@ Sample_var <- function(x,f=rep(1,times=length(x))){
 Sample_var(data2,freq2)
 
 
+
 ### Function of Moments about origin##
 data3 <- c(25,35,45,55,65,75)
 freq3 <- c(10,22,42,15,6,5)
@@ -109,6 +117,7 @@ Moment_Origin <- function(x,r,f= rep(1,times=length(x))){
   return(moment)
 }
 Moment_Origin(data3,3,freq3)
+
 
 
 ## Function of Central Moment##
@@ -131,6 +140,7 @@ Central_Moment <- function(x,r,f=rep(1,times=length(x))){
 Central_Moment(data3,4,freq3)
 
 
+
 ### Function of Skewness ###
 data4 <- c(0,18,19,20,21,22,23,24,25,26,27)
 freq4 <- c(1,1,2,1,8,4,5,5,3,1,1)
@@ -142,6 +152,8 @@ Skewness1 <- function(x,f=rep(1,times=length(x))){
   return(round(skew,3))
 }
 Skewness1(data4,freq4)
+
+
 
 ### Another Way
 Skewness2 <- function(x,f=rep(1,times=length(x))){
@@ -162,6 +174,7 @@ Skewness2 <- function(x,f=rep(1,times=length(x))){
   return(round(skew,3))
 }
 Skewness2(data4,freq4)
+
 
 
 ### Function of Kurtosis ###
@@ -194,6 +207,7 @@ Kurtosis2 <- function(x,f=rep(1,times=length(x))){
 Kurtosis2(data4,freq4)
 
 
+
 #### Function of Correlation ####
 x1 <- c(112, 116, 103, 116, 98, 118, 112, 104, 111, 105)
 y1 <- c(65, 69, 60, 68, 56, 72, 60, 53, 64, 62)
@@ -221,6 +235,8 @@ Corr <- function(x,y){
 Corr(x1,y1)
 
 
+
+
 #### Function of Regression ###
 x2 <- c(56,42,36,47,49,42,60,72,63,55)
 y2 <- c(147,125,118,128,145,140,155,160,149,150)
@@ -246,3 +262,46 @@ Reg <- function(x,y){
   }
 }
 Reg(x2,y2)
+
+
+
+## Factorial program
+Factorial <- function(n){
+  if(n>0){
+    fact <- 1
+    for(i in 1:n){
+      fact <- fact*i
+    }
+    return(fact)
+  }
+  else if(n==0){
+    return(1)
+  }
+  else{
+    print("Sorry! Factorial does not exits for this number.")
+  }
+}
+Factorial(5)
+
+## Permutation & Combination er program:
+Permutation <- function(n,r){
+  if(n>=r){
+    npr <- Factorial(n)/Factorial(n-r)
+    return(npr)
+  }
+  else{
+    return("Sorry! Permutation can't be determine because r is larger than n.")
+  }
+}
+Permutation(4,4)
+
+Combination <- function(n,r){
+  if(n>=r){
+    ncr <- Factorial(n)/(Factorial(r)*Factorial(n-r))
+    return(ncr)
+  }
+  else{
+    return("Sorry! Permutation can't be determine because r is larger than n.")
+  }
+}
+Combination(5,0)
